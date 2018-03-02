@@ -9,7 +9,7 @@
         <label>Username</label>
         {{ form.username(class="form-control", placeholder="Digite seu usuário") }}
         {% if form.errors.username %}
-        <div class="alert alert-danger" role="alert">...</div>
+        <div class="alert alert-danger" role="alert">
                 <ul>
                 {% for e in form.errors.username %}
                     <li>{{ e }}</li>
@@ -21,7 +21,7 @@
         <label>Password</label>
         {{ form.password(class="form-control", placeholder="Digite sua Senha") }}
         {% if form.errors.password %}
-        <div class="alert alert-danger" role="alert">...</div>
+        <div class="alert alert-danger" role="alert">
             <ul>
             {% for e in form.errors.password %}
                 <li>{{ e }}</li>

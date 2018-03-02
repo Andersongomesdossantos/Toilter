@@ -15,7 +15,7 @@ class User(db.Model):
         self.password = passoword
         self.email = email
 
-    def__repr__ (self):
+    def __repr__ (self):
         return "<User %r> " % self.username
 
 class Post(db.Model):
@@ -32,7 +32,7 @@ class Post(db.Model):
         self.user_id = user_id
 
     def __repr__(self):
-        retur "<Post %r>" % self.id
+        return "<Post %r>" % self.id
 
 class Follow(db.Model):
     __tablename__= "follow"
@@ -41,5 +41,5 @@ class Follow(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     follower-id = db.Column(db.Integer, db.ForeignKey('users.id')
 
-    user = db.realtionship('User', foreign_keys=user_id)
-    follower = db.realtionship('User', foreign_keys=follower_id)
+    user = db.relationship('User', foreign_keys=user_id)
+    follower = db.relationship('User', foreign_keys=follower_id)
